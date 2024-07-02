@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.celestial.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+        <!-- Other meta tags and stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Your existing styles -->
+ 
+    
+    <style>
+       
+       .grid-img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        /* Main CSS */
+        .grid-wrapper > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .grid-wrapper > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .grid-wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+        }
+        
+        .grid-wrapper .wide {
+            grid-column: span 2;
+        }
+        
+        .grid-wrapper .tall {
+            grid-row: span 2;
+        }
+        
+        .grid-wrapper .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .ready-to-learn {
+    text-align: center;
+    padding: 50px 0;
+}
+h4{
+    font-size: 60px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+     background-color: #f3efef ; 
+}
+
+.feature:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature h5 {
+    font-size: 30px;
+}
+
+.feature p {
+    font-size: 18px;
+    color: #4d4d62;
+}
+.fas{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+  
+     
+          
+        .feature-item2{
+            
+            margin: 20px;
+           
+        }
+       
+        h6{
+            padding-left: 210px;
+            font-size: 30px;
+            margin-top: 70px;
+        }
+        .card{
+            width: 700px ;
+            height: 709px;
+            margin-left: 210px;
+            margin-bottom: 30px;
+            margin-top: 0px;
+        }
+        .card img{
+            width: 700px;
+            height:410px;
+            
+        }
+        .card-title{
+          font-size: 30px;
+        }
+        .card-text{
+            font-size: 20px;
+
+        }
+         /* Newsletter Section Styles */
+         #newsletter {
+            background-color: #dddadad1;
+            padding: 50px;
+            text-align: center;
+            
+        }
+
+        #newsletter h2 {
+            margin-bottom: 30px;
+        }
+
+        #newsletter form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #newsletter form input[type="email"],
+        #newsletter form button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .im{
+            width: 500px;
+            height: 400px;
+            align-items: center;
+            margin-left: 500px;
+        }
+      .feature-item {
+            border-radius: 10px; /* Add border-radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow effect */
+            transition: box-shadow 0.3s; /* Add smooth transition effect for box shadow */
+        }
+
+        /* Change box shadow on hover */
+        .feature-item:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
+        }
+       body{
+        font-family: Garamond;
+       }
+       h3{
+        font-size: 35px;
+
+       }
+       p1{
+        font-size: 18px;
+
+       }
+        #navbarNav{
+     padding-right: 20px;
+     margin-right: 0px;
+     color: #110e0e;
+     padding-left: 70px;
+     text-align: center;
+     
+    
+   }
+
+   .features2{
+    padding-top: 50px;
+    background-color: #f3efef;
+     
+   }
+         /* Modal styles */
+        .modal {
+            display: none; /* Hide the modal by default */
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 34px;
+            
+        }
+        .modal-content {
+             background-color: #d8cece; 
+            margin-left: 450px;
+            margin-top: 200px;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            max-width: 40%;
+            max-height: 40%;
+            text-align: center;
+        }
+        /* Button styles */
+        .button {
+            padding: 10px 20px;
+            background-color: #1b1b1c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            transition: background-color 0.5s ease-in-out;
+            color: #fff;
+            background-color: #000000;
+            font-family: Garamond;
+            font-size: 22px;
+            
+           
+        }
+
+        .navbar-brand img {
+            width: 60px; /* Adjust the width of the logo image */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Adjust spacing between logo and text */
+        }
+
+        .navbar-brand span {
+            font-size: 50px; /* Adjust font size of the brand text */
+        }
+
+        /* Carousel Section */
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .carousel-caption {
+            padding-bottom: 200px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            font-family: Garamond;
+            
+           
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom : 30px;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        #nav-sam2{
+            justify-content: right;
+            color: rgb(10, 6, 6); 
+            text-align: center;
+            padding-right: 40px;
+            margin-right:0px;
+            
+            padding-left: 40px;
+            background-color: #f3efef;
+
+        }
+        #nav-sam {
+            justify-content: end;
+            padding-left: 20px;
+            
+          
+        }
+        #navbarnew{
+            color: #110e0e;
+            padding-left: 200px;
+            padding-top: 100px;
+            margin-left: 1px;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="#">
+        
+            <img src="https://images-platform.99static.com/OYwr7NEO02lL7JcldxFx_lAk2JQ=/0x0:1276x1276/500x500/top/smart/99designs-contests-attachments/127/127384/attachment_127384956" alt="Astronomy Hub Logo">
+            <span class="celestial-name" style="font-size: 24px;">
+                Celestial</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="">Home</a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="spacegal.htm">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="celestial2.html">Planets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="spacegallery.htm">Galaxies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test.htm">Space videos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section id="hero" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner color-white">
+            <div class="carousel-item active">
+                <img src="https://img.freepik.com/free-photo/spaceship-orbits-dark-galaxy-glowing-blue-comet-generated-by-ai_188544-9662.jpg?t=st=1718189983~exp=1718193583~hmac=51a7980e83b7ab6cd7f61c3c677ef66a65a5d3e3a2a206200a517808954a9d1a&w=1060" class="d-block w-100" alt="Astronomy 1">
+                <div class="carousel-caption">
+                    <h1> Celestial</h1>
+                    <p class="u color-white">Explore the wonders of the universe with us!<br><br><br>
+                        <a href="#" class="btn btn-dark" id="openModalBtn">Ask Your Question</a>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064385.jpg?t=st=1719915997~exp=1719919597~hmac=dae8a0243b7485416a828a9f49d16f5a60321ee0973aa07e6b99097787dfb2cf&w=1380" class="d-block w-100" alt="Astronomy 2">
+                <div class="carousel-caption">
+                    <h1> Celestial</h1>
+                    <p>Explore the wonders of the universe with us!<br><br><br>
+                        <a href="#" class="btn btn-dark" id="openModalBtn">Ask Your Question</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h2>Ask your Question</h2>
+                <form id="getupdates">
+                    <label for="name">Name</label><br>
+                    <input type="name" id="name" name="name"><br><br>
+                    <label for="question">Any Question </label><br>
+                    <input type="question" id="question" name="question"><br><br>
+                    <button type="submit" class="button btn-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#hero" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="ready-to-learn">
+                <h4>Get Ready to Explore the Wonders of the Universe</h4>
+            </div>
+            <div class="features-container">
+                <div class="feature">
+                    <i class="fas fa-space-shuttle"></i>
+                    <h5>Latest Space News</h5><a href="https://www.nasa.gov/news/all-news/">
+                    <p>Stay updated with the latest discoveries and missions in the space industry.</p>
+                </a>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star color-black"></i>
+                   
+                    <h5>Celestial Events</h5><a href="https://www.news18.com/web-stories/lifestyle/celestial-events-to-watch-2230430/">
+                    <p>Don't miss any important celestial events happening in the sky above you.</p></a>
+                </div>
+               
+                <div class="feature"> 
+                    
+                    <i class="fas fa-rocket"></i>
+                    
+                    <h5>Space Missions</h5>
+                    <a href="https://education.nationalgeographic.org/resource/history-space-exploration/">
+                    <p>Get detailed information about past, present, and future space missions.</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="bigbang">
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light ">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHgwdjhrNjR1MzR5Y2tkaWZqaWRmaTFuYmN1MnBsMDFkZDN5Yjh4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1BgRuUbcL5wgQLtu/giphy.webp" alt="Astronomy Hub Logo">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-dio active ">
+                        <h2>The Big Bang</h2>
+                        <p2>Origin: The Big Bang Theory proposes that the universe began as an extremely hot and dense singularity about 13.8 billion years ago.The universe emerged from a "primeval atom".
+                            <br>
+                        
+                            Formation of Elements: As the universe continued to expand and cool, the first atoms formed, primarily hydrogen and helium. Over time, these atoms clumped together under gravity to form stars and galaxies.
+                            <br>
+                            Expansion of the Universe: Observations of distant galaxies show that they are moving away from us, and the farther away they are, the faster they are moving. This implies that the universe is expanding, consistent with the predictions of the Big Bang Theory.
+                        <br></p2>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg " id="nav-sam2"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-sam active">
+                    <h2>Black Hole </h2>
+                    <p2>Black holes are fascinating cosmic phenomena. They're regions in space where gravity is so strong that nothing, not even light, can escape from them once it crosses the event horizon. They're formed when massive stars collapse under their own gravity at the end of their life cycles.
+                          <br>
+                        At the center of a black hole lies a singularity, where matter is infinitely dense and space-time is infinitely curved. Surrounding the singularity is the event horizon, the boundary beyond which nothing can return.
+                        <br>
+                        Black holes come in different sizes, from stellar-mass black holes, which are several times more massive than the Sun.</p1>
+                        <br>
+                </li>
+            </ul>
+        </p2>
+            
+            <div class="collapse navbar-collapse" id="nav-sam">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-sam active">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXR3dzQ2eDdkdXk0ZDVsandoZjdldXl1dHp2M21reGU0ajVkcm1lZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pv8Sc5qmruFwfmJKre/giphy.webp" alt="Astronomy Hub Logo"></div>
+            </div>
+        </nav>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="https://media0.giphy.com/media/3ohhwEZqxzKbNUHzji/giphy.webp?cid=790b7611c0jkka8dl0zqi6bwe6am1io09nppxuzf2z6emvhu&ep=v1_gifs_search&rid=giphy.webp&ct=g" alt="Astronomy Hub Logo">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-dio active">
+                    <h2>Gravitational Waves</h2>
+                    <p2>Gravitational waves are ripples in the fabric of spacetime itself, caused by some of the most violent and energetic processes in the universe. They were predicted by Albert Einstein in his theory of general relativity in 1915 and were directly detected for the first time in 2015 by the Laser Interferometer Gravitational-Wave Observatory (LIGO).
+                    Gravitational waves are incredibly faint by the time they reach Earth, making them extremely difficult to detect. To do so, scientists use extremely sensitive instruments known as interferometers, which can measure tiny changes in the lengths of two perpendicular arms caused by passing gravitational waves.</p2>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="starsg">
+        
+    </div>
+   
+    <section class="features2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item2">
+                        <i class=""></i>
+                        <img src="https://cdn.britannica.com/36/194736-050-CA5BE18B/Carl-Sagan-science-writer-American.jpg" class="d-block w-100 h-75 "><br>
+                        <h3> Carl Sagan</h3>
+                        <p1>Sagan was a strong advocate for the Search for Extraterrestrial Intelligence (SETI). Sagan worked closely with NASA on various space missions, including the Mariner, Viking, and Voyager missions.He collaborated with SETI researchers .</p1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item2">
+                        <i class=""></i>
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb40lthICuaaUHzQrVaiW13XE_qmkQw6ntkRzPZ3M-MUtBDbmjGnBF0vq8dlF4QrphUHCGBc7rRszfzEBcbxm8Pvj1qmY6TjpjYWCtDsj5gXhxQ7UidCffV121zKQjfIHBI_7P-z0L-Sg/s1600/Neil+deGrasse+Tyson+01.jpg" class="d-block w-100 h-100 " ><br>
+                        <h3>Dr. Neil Tyson</h3>
+                        <p1> Contributed to astrophysics and asstronomy .He's the director of the Hayden Planetarium in New York City and has hosted several popular science TV shows,"Cosmos: A Spacetime Odyssey."</p1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item2">
+                        <i class=""></i>
+                        <img src="https://media.gettyimages.com/id/80812673/photo/hawking-offers-case-for-space-travel-on-nasa-anniversary.jpg?s=1024x1024&w=gi&k=20&c=UlM3peLcttwU89Dh0mjgzwP6xJOvtV0ZAp74Ny4M9ik=" class="d-block w-100 h-75 " ><br>
+                        <h3>Stephen Hawking</h3>
+                        <p1>Hawking's research focused on black holes, the Big Bang theory, and the nature of gravity. Despite  amyotrophic lateral sclerosis (ALS) for most of his life, he became one of the most influential scientists of his time during the 80's.
+
+                        </p1>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+      <!-- Image Section -->
+<!-- Horizontal Astronomy Image Carousel Section -->
+<!-- Carousel Section -->
+
+   
+    
+
+
+    <div class="ready-to-learn">
+        <h4>Ready to learn?</h4>
+        <div class="features-container">
+            <div class="feature" style="background-color: white;">
+                <i class="fas fa-desktop"></i>
+                <h5>Accessibility</h5>
+                <p>Whether you're accessing from your desktop, smartphone, our platform is designed to be accessible anytime.</p>
+            </div>
+            <div class="feature" style="background-color: white;">
+                <i class="fas fa-newspaper" ></i>
+                <h5>News and Updates</h5>
+                <p>Stay informed about the latest developments in astronomy and space exploration.</p>
+            </div>
+            <div class="feature" style="background-color: white;">
+                <i class="fas fa-images" ></i>
+                <h5>Stunning Visuals</h5>
+                <p>Immerse yourself in the beauty of the cosmos with our collection of high-resolution images.</p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-wrapper">
+        <div class="tall">
+            <img src="https://i.pinimg.com/originals/df/b3/23/dfb3232d65defd5911e7ec265f4dc010.gif" alt="">
+        </div>
+        <div class="big">
+          <img src="https://www.gifcen.com/wp-content/uploads/2021/10/galaxy-gif-3.gif" alt="">
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/57/ac/d6/57acd67bff5f4a43ecad3d5786317f11.gif" alt="">
+        </div>
+        
+        <div class="big">
+            <img src="https://i.pinimg.com/originals/1a/18/24/1a18248f16235c982a2a20dd863bbaf1.gif" alt="">
+        </div>
+        <div>
+           <img src= "https://www.icegif.com/wp-content/uploads/2022/08/icegif-1469.gif" alt="">
+        </div>
+        <div class="">
+            <img src="https://www.icegif.com/wp-content/uploads/2021/10/icegif-1642.gif" alt="">
+        </div>
+        <div>
+            <img src="https://img.freepik.com/free-photo/fictional-planet-with-colourful-night-sky-stars-nebula_1048-7926.jpg?t=st=1718189260~exp=1718192860~hmac=797ad1b0032e983006a362ca237431342e2306e34fb9a619f486b683a27637d5&w=826" alt="">
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/1a/50/af/1a50af46f54b1783e4d46b14b0e131c8.gif" alt="">
+        </div>
+        
+    </div>
+        
+        
+    <section id="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-dark">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+         
+
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-align-right">
+            <span class="text-muted">© 2024 Celestial</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script>
+        // Smooth scrolling
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
+
+        // Navbar background change on scroll
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+
+        // Carousel interval
+        $('.carousel').carousel({
+            interval: 1200 // Change slide every 3 seconds
+        });
+
+        // Modal handling
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementById("closeModalBtn");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Form submission handling
+        var form = document.getElementById("getupdates");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // You can add your form submission logic here
+            alert("Form submitted!"); // For demonstration, show an alert
+        });
+    </script>
+    <script>
+          var newsletterForm = document.getElementById("newsletterForm");
+        newsletterForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var email = document.getElementById("newsletterEmail").value;
+            // Here you can handle the form submission, e.g., send the email to a server
+            alert("Thank you for subscribing with email: " + email);
+            newsletterForm.reset(); // Optionally reset the form after submission
+        });
+
+    </script>
+</body>
+</html>
